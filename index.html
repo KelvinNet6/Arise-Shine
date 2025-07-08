@@ -8,18 +8,22 @@
     body { margin:0; font-family: Arial, sans-serif; }
     nav { background: #0a3d62; padding: 1rem; text-align: center; position: relative; }
     nav .logo { color: #fff; font-weight: bold; margin-right: 2rem; display: inline-block; }
+    nav .logo span { color: #00f; }
     nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
     nav a:hover { text-decoration: underline; }
     nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
     nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
     nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
-    header { background: url('AriseNshine.png') no-repeat center center/cover; padding: 20rem 2rem; color: #fff; text-align: center; }
-    header h1 { font-size: 3rem; }
+    header { background: url('https://source.unsplash.com/1600x900/?sunrise,mountains') no-repeat center center/cover; height: 100vh; color: #fff; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+    header h1 { font-size: 4rem; }
+    header p { font-size: 1.5rem; }
+    .header-description { text-align: center; padding: 2rem; max-width: 800px; margin: 0 auto; }
     section { display: flex; align-items: center; padding: 4rem 2rem; }
     section:nth-of-type(even) { flex-direction: row-reverse; }
-    .text { flex: 1; padding: 1rem; }
-    .image { flex: 1; }
-    .image img { width: 100%; border-radius: 8px; }
+    .text, .image { flex: 1; padding: 1rem; }
+    .image img { width: 100%; height: auto; border-radius: 10px; }
+    #home { justify-content: center; }
+    #home .text { max-width: 800px; margin: 0 auto; }
     .accordion { margin-top: 1rem; }
     .accordion-item { border-bottom: 1px solid #ccc; }
     .accordion-header { background: #0a3d62; color: #fff; padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
@@ -38,13 +42,14 @@
 <body>
   <nav>
     <span class="logo">Olimi <span>Arise & Shine</span></span>
-    <span class="menu-toggle">☰</span>
+    <span class="menu-toggle" onclick="document.querySelector('.side-menu').style.display='block'">☰</span>
     <a href="#">Home</a>
     <a href="#journey">Your Journey</a>
     <a href="#programs">Pathways to Shine</a>
     <a href="#book">Book a Session</a>
     <a href="#contact">Contact</a>
     <div class="side-menu">
+      <a href="#" onclick="document.querySelector('.side-menu').style.display='none'">✕ Close</a>
       <a href="#">Home</a>
       <a href="#journey">Your Journey</a>
       <a href="#programs">Pathways to Shine</a>
@@ -53,11 +58,17 @@
     </div>
   </nav>
   <header>
+    <h1>Welcome to Olimi</h1>
+    <p>Healing, Peace, Love, Freedom</p>
   </header>
+  <div class="header-description">
+    <h2>Our Mission</h2>
+    <p>At Olimi, we believe everyone can arise and shine through healing, peace, love, and freedom. We guide you to align your spirit, mind, and finances for a life of wholeness.</p>
+  </div>
   <section id="home">
-    <div class="image"><img src="OurVision.png" alt="Banner"></div>
     <div class="text">
-      <h2>Our Vision</h2>
+      <h2>About Us</h2>
+      <p>Olimi Arise and Shine empowers you with pathways to personal growth. Our vision is to see individuals and families restored, aligned, and walking in true freedom. Explore our programs to start your journey today.</p>
       <div class="accordion">
         <div class="accordion-item">
           <div class="accordion-header">Healing <span>+</span></div>
@@ -78,63 +89,54 @@
       </div>
     </div>
   </section>
-
   <section id="journey">
-    <div class="image"><img src="https://source.unsplash.com/600x400/?journey,healing" alt="Journey"></div>
+    <div class="image"><img src="https://source.unsplash.com/600x400/?spiritual" alt="Spiritual Journey"></div>
     <div class="text">
       <h2>Your Journey</h2>
-      <p>The meaning of "Olimi" is deeply spiritual and symbolic, representing your path into healing, coaching, and spirituality. Core values include Peace, Alignment, Growth, Love, and Freedom.</p>
+      <p>Discover the meaning of Olimi, our story of healing, coaching, and spirituality. Learn about our core values: Peace, Alignment, Growth, Love, and Freedom.</p>
     </div>
   </section>
-
   <section id="programs">
-    <div class="image"><img src="https://source.unsplash.com/600x400/?meditation,coaching" alt="Programs"></div>
+    <div class="image"><img src="https://source.unsplash.com/600x400/?coaching" alt="Programs"></div>
     <div class="text">
       <h2>Pathways to Shine</h2>
-      <p>Explore transformational pathways: Self-Healing, Spiritual Alignment, Financial Freedom, Marriage & Relationships, Personal Peace. Each path offers free previews, downloadable workbooks, and coaching add-ons.</p>
+      <p>Explore our transformational pathways: Self-Healing, Spiritual Alignment, Financial Freedom, Marriage & Relationships, and Personal Peace. Each path includes free PDFs, workbooks, and coaching add-ons.</p>
     </div>
   </section>
-
   <section id="book">
-    <div class="image"><img src="https://source.unsplash.com/600x400/?coaching,session" alt="Book Session"></div>
+    <div class="image"><img src="https://source.unsplash.com/600x400/?meeting" alt="Book a Session"></div>
     <div class="text">
       <h2>Book a Session</h2>
-      <p>Monetize your journey through 1:1 or group coaching. Choose session types like healing, financial clarity, couple’s healing, or spiritual clarity with flexible packages.</p>
+      <p>Book your 1:1 or group coaching session. Choose from single sessions, bundles, or monthly mentorships to find clarity and freedom in all areas of life.</p>
     </div>
   </section>
-
   <section id="contact">
-    <div class="image"><img src="https://source.unsplash.com/600x400/?contact,prayer" alt="Contact"></div>
+    <div class="image"><img src="https://source.unsplash.com/600x400/?contact" alt="Contact"></div>
     <div class="text">
       <h2>Contact & Prayer Requests</h2>
-      <p>Reach out for a discovery call, contact form, or submit a prayer/healing request.</p>
-      <a href="contact.html" class="btn">Go to Contact Page</a>
+      <p>Reach out to us for support, discovery calls, or to submit prayer and healing requests. Join our community and walk your journey with us.</p>
+      <a href="#" class="btn">Go to Contact Page</a>
     </div>
   </section>
-
   <footer>
-    &copy; 2025 Olimi Arise and Shine. All rights reserved.
+    <p>&copy; 2025 Olimi Arise and Shine. All rights reserved.</p>
   </footer>
-
   <script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
       header.addEventListener('click', () => {
+        accordionHeaders.forEach(h => {
+          if(h !== header) {
+            h.nextElementSibling.style.maxHeight = null;
+          }
+        });
         const content = header.nextElementSibling;
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
-          header.querySelector('span').textContent = '+';
         } else {
-          document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
-          document.querySelectorAll('.accordion-header span').forEach(s => s.textContent = '+');
           content.style.maxHeight = content.scrollHeight + 'px';
-          header.querySelector('span').textContent = '-';
         }
       });
-    });
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sideMenu = document.querySelector('.side-menu');
-    menuToggle.addEventListener('click', () => {
-      sideMenu.style.display = sideMenu.style.display === 'block' ? 'none' : 'block';
     });
   </script>
 </body>
