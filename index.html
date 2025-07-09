@@ -33,15 +33,25 @@ nav .logo span {
   color: #00f;
 }
 
-nav a {
+nav .nav-links {
+  display: flex;
+}
+
+nav .nav-links a {
   color: #fff;
   margin: 0 1rem;
   text-decoration: none;
 }
 
-nav a:hover {
+nav .nav-links a:hover {
   text-decoration: underline;
 }
+
+/* Add some padding to the top so content isn't hidden under the fixed nav */
+.content {
+  padding-top: 80px;
+}
+
     nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
     nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
     nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
