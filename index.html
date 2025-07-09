@@ -7,45 +7,12 @@
   <style>
     body { margin:0; font-family: Arial, sans-serif; }
     html{ scroll-behavior: smooth }
- nav {
-      background: #0a3d62;
-      padding: 1rem;
-      padding-right: 100px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between; /* logo on left, links on right */
-      align-items: center;
-      box-sizing: border-box;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      color: #fff;
-      font-weight: bold;
-      margin-right: 1rem;
-      display: inline-block;
-    }
-
-    nav .logo span {
-      color: #00f;
-    }
-
-    nav .nav-links {
-      display: flex;
-    }
-
-    nav .nav-links a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    nav .nav-links a:hover {
-      text-decoration: underline;
-    }
+    nav { background: #0a3d62; padding: 1rem; padding-right: 100px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; z-index: 1000; }
+    nav .logo { color: #fff; font-weight: bold; margin-right: 1rem; display: inline-block; }
+    nav .logo span { color: #00f; }
+    nav .nav-links { display: flex; }
+    nav .nav-links a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    nav .nav-links a:hover { text-decoration: underline; }
     nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
     nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
     nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
@@ -81,15 +48,17 @@
      <div class="nav-links">
     <a href="#">Home</a>
     <a href="#journey">Your Journey</a>
+    <a href="#home">About</a>
     <a href="#programs">Pathways to Shine</a>
     <a href="#book">Book a Session</a>
-      <a href="#sacredShop">Shop</a>
-     <a href="#contact">Contact</a>
+    <a href="#sacredShop">Shop</a>
+    <a href="#contact">Contact</a>
      </div>
     <div class="side-menu">
       <a href="#" onclick="document.querySelector('.side-menu').style.display='none'">✕ Close</a>
       <a href="#">Home</a>
       <a href="#journey">Your Journey</a>
+      <a href="#home">About</a>
       <a href="#programs">Pathways to Shine</a>
       <a href="#book">Book Session</a>
       <a href="#sacredShop">Shop</a>
