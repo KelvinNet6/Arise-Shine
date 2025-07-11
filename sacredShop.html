@@ -13,13 +13,18 @@
       padding: 0;
       line-height: 1.6;
     }
-
-    header {
-      background: #5A4D3B;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
+    html{ scroll-behavior: smooth }
+    nav { background: #0a3d62; padding: 1rem; padding-right: 100px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; z-index: 1000; }
+    nav .logo { color: #fff; font-weight: bold; margin-right: 1rem; display: inline-block; }
+    nav .logo span { color: #ADD8E6; }
+    nav .nav-links { display: flex; }
+    nav .nav-links a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    nav .nav-links a:hover { text-decoration: underline; }
+    nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
+    nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
+    nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
+    header { background: url('https://duhocvip.com/wp-content/uploads/2017/06/contact-us.jpg') no-repeat center center/cover; height: 50vh; display: flex; justify-content: center; align-items: center; color: #fff; text-align: center; }
+    header h1 { font-size: 3rem; background: rgba(0,0,0,0.4); padding: 1rem 2rem; border-radius: 5px; }
 
     main {
       max-width: 900px;
