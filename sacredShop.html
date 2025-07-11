@@ -141,4 +141,51 @@
     &copy; 2025 Olimi Arise and Shine. All rights reserved.
   </footer>
 </body>
-</html>
+</html> <footer>
+    <div class="footer-column">
+      <h3>About Olimi</h3>
+      <p>Olimi Arise & Shine is dedicated to guiding you on your journey of healing, peace, love, and freedom.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="#journey">Your Journey</a>
+      <a href="#programs">Pathways to Shine</a>
+      <a href="#book">Book a Session</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-column newsletter">
+      <h3>Subscribe</h3>
+      <p>Join our newsletter for updates and inspiration.</p>
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-column">
+      <h3>Other</h3>
+      <p>Follow us on social media and stay connected with our community.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        accordionHeaders.forEach(h => {
+          if(h !== header) {
+            h.nextElementSibling.style.maxHeight = null;
+          }
+        });
+        const content = header.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
