@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olimi Arise and Shine | Pathways to Success</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+    nav { background: #0a3d62; padding: 1rem; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; z-index: 1000; }
+    nav .logo { color: #fff; font-weight: bold; margin-right: 1rem; display: inline-block; }
+    nav .logo span { color: #ADD8E6; }
+    nav .nav-links { display: flex; }
+    nav .nav-links a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    nav .nav-links a:hover { text-decoration: underline; }
+    nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
+    nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
+    nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
+    header { background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=1500&q=80') no-repeat center center/cover; height: 50vh; display: flex; justify-content: center; align-items: center; color: #fff; text-align: center; margin-top: 60px; }
+    header h1 { font-size: 3rem; background: rgba(0,0,0,0.4); padding: 1rem 2rem; border-radius: 5px; }
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+    .pathways { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .pathway { background: #fff; padding: 2rem; border-radius: 8px; border: 1px solid #dcd2bc; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .pathway:hover { transform: translateY(-5px); }
+    .pathway button { margin-top: 1rem; background: #5A4D3B; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
+    .pathway button:hover { background: #A1866F; }
+    .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000; }
+    .modal-content { background: #fff; padding: 2rem; border-radius: 8px; max-width: 500px; margin: auto; position: relative; }
+    .close { position: absolute; top: 10px; right: 20px; font-size: 1.5rem; cursor: pointer; }
+    footer { background: #0a3d62; color: #fff; display: flex; flex-wrap: wrap; padding: 2rem; }
+    .footer-column { flex: 1 1 200px; margin: 1rem; }
+    .footer-column h3 { margin-top: 0; }
+    .footer-column a { color: #fff; text-decoration: none; display: block; margin: 0.5rem 0; }
+    @media (max-width: 768px) {
+      nav .nav-links { display: none; }
+      nav .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="logo">Olimi <span>Arise & Shine</span></span>
+    <span class="menu-toggle" onclick="document.querySelector('.side-menu').style.display='block'">☰</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Your Journey</a>
+      <a href="#">About</a>
+      <a href="#">Pathways to Shine</a>
+      <a href="#">Book a Session</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="side-menu">
+      <a href="#" onclick="document.querySelector('.side-menu').style.display='none'">✕ Close</a>
+      <a href="index.html">Home</a>
+      <a href="#">Your Journey</a>
+      <a href="#">About</a>
+      <a href="#">Pathways to Shine</a>
+      <a href="#">Book a Session</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Pathways to Success</h1>
+  </header>
+  <main>
+    <p>Discover your pathways to success through focused guidance, practical tools, and supportive community. Our offerings are designed to empower you to thrive in all areas of life, from career and finances to personal mindset and growth.</p>
+    <div class="pathways">
+      <div class="pathway">
+        <h3>Career Growth</h3>
+        <p>Develop skills and strategies for advancing your professional journey.</p>
+        <button onclick="openModal('career')">Learn More</button>
+      </div>
+      <div class="pathway">
+        <h3>Financial Empowerment</h3>
+        <p>Gain insights and tools to manage and grow your financial well-being.</p>
+        <button onclick="openModal('financial')">Learn More</button>
+      </div>
+      <div class="pathway">
+        <h3>Mindset Mastery</h3>
+        <p>Cultivate a positive, resilient mindset to achieve your goals and thrive.</p>
+        <button onclick="openModal('mindset')">Learn More</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal-career" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('career')">&times;</span>
+      <h2>Career Growth</h2>
+      <p>Explore pathways to enhance your career, build your network, and reach your professional aspirations with clarity and confidence.</p>
+    </div>
+  </div>
+  <div id="modal-financial" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('financial')">&times;</span>
+      <h2>Financial Empowerment</h2>
+      <p>Learn practical steps to take control of your finances, set achievable goals, and build a secure and abundant future.</p>
+    </div>
+  </div>
+  <div id="modal-mindset" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('mindset')">&times;</span>
+      <h2>Mindset Mastery</h2>
+      <p>Unlock your potential by mastering your thoughts, overcoming limiting beliefs, and creating a mindset that supports your success.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-column">
+      <h3>About Olimi</h3>
+      <p>Olimi Arise & Shine guides you on your journey of healing, success, and fulfillment.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="#">Pathways</a>
+      <a href="#">Book a Session</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById('modal-' + id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById('modal-' + id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) { modal.style.display = 'none'; }
+      });
+    }
+  </script>
+</body>
+</html>
