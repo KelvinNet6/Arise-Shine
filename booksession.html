@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olimi Arise and Shine | Book a Session</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+    html { scroll-behavior: smooth; }
+    nav { background: #0a3d62; padding: 1rem; padding-right: 100px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; z-index: 1000; }
+    nav .logo { color: #fff; font-weight: bold; margin-right: 1rem; display: inline-block; }
+    nav .logo span { color: #ADD8E6; }
+    nav .nav-links { display: flex; }
+    nav .nav-links a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    nav .nav-links a:hover { text-decoration: underline; }
+    nav .menu-toggle { display: none; cursor: pointer; color: #fff; font-size: 1.5rem; }
+    nav .side-menu { display: none; position: fixed; top: 0; right: 0; height: 100%; width: 200px; background: rgba(10,61,98,0.9); padding: 2rem; text-align: left; }
+    nav .side-menu a { display: block; margin: 1rem 0; color: #fff; }
+
+    header { background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover; height: 40vh; display: flex; justify-content: center; align-items: center; color: #fff; text-align: center; }
+    header h1 { font-size: 3rem; background: rgba(0,0,0,0.4); padding: 1rem 2rem; border-radius: 5px; }
+
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+    main p { color: #333; line-height: 1.6; }
+
+    .cta-button {
+      display: inline-block;
+      background: #5A4D3B;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover { background: #A1866F; }
+
+    footer { background: #0a3d62; color: #fff; display: flex; flex-wrap: wrap; padding: 2rem; margin-top: 4rem; }
+    .footer-column { flex: 1 1 200px; margin: 1rem; }
+    .footer-column h3 { margin-top: 0; }
+    .footer-column a { color: #fff; text-decoration: none; display: block; margin: 0.5rem 0; }
+    .newsletter input { padding: 0.5rem; margin-bottom: 0.5rem; width: 100%; }
+    .newsletter button { padding: 0.5rem; background: #fff; color: #0a3d62; border: none; cursor: pointer; }
+    .social-icons { margin-top: 1rem; }
+    .social-icons a { display: inline-block; margin-right: 0.5rem; color: #fff; font-size: 1.2rem; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      nav a { display: none; }
+      nav .menu-toggle { display: inline-block; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="logo">Olimi <span>Arise & Shine</span></span>
+    <span class="menu-toggle" onclick="document.querySelector('.side-menu').style.display='block'">☰</span>
+    <div class="nav-links">
+      <a href="index.html#">Home</a>
+      <a href="index.html#journey">Your Journey</a>
+      <a href="index.html#home">About</a>
+      <a href="index.html#programs">Pathways to Shine</a>
+      <a href="book-session.html">Book a Session</a>
+      <a href="index.html#sacredShop">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="side-menu">
+      <a href="#" onclick="document.querySelector('.side-menu').style.display='none'">✕ Close</a>
+      <a href="index.html#">Home</a>
+      <a href="index.html#journey">Your Journey</a>
+      <a href="index.html#home">About</a>
+      <a href="index.html#programs">Pathways to Shine</a>
+      <a href="book-session.html">Book a Session</a>
+      <a href="index.html#sacredShop">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Book a Session</h1>
+  </header>
+
+  <main>
+    <p>Book your 1:1 or group coaching session with Olimi. Whether you're looking for personal guidance or group support, we offer a variety of coaching options tailored to meet your needs. Our sessions are designed to help you gain clarity, insight, and direction in your journey towards healing and growth.</p>
+    <p>Choose from single sessions, bundles, or monthly mentorships depending on the level of support you're seeking. Each option provides a personalized approach to coaching, focusing on your unique goals and challenges. Through our sessions, you'll gain the tools to create lasting change in your life.</p>
+    <p>Our 1:1 sessions offer a more intimate and focused environment, while group coaching allows you to connect and learn alongside others on a similar path. Both options aim to empower you with the confidence and strategies needed to find freedom, peace, and alignment in all areas of life.</p>
+
+    <a href="sacredshop.html" class="cta-button">View More & Book Now</a>
+
+    <form id="bookForm" style="margin-top:3rem; background:#fff; padding:2rem; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <h2 style="color:#5A4D3B;">Book Your Session</h2>
+      <label>Full Name:<br>
+        <input type="text" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;">
+      </label>
+      <label>Email Address:<br>
+        <input type="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem;">
+      </label>
+      <label>Session Type:<br>
+        <select name="session" required style="width:100%; padding:0.5rem; margin-bottom:1rem;">
+          <option value="">Select an option</option>
+          <option value="1-1">1:1 Coaching</option>
+          <option value="group">Group Coaching</option>
+          <option value="mentorship">Monthly Mentorship</option>
+        </select>
+      </label>
+      <label>Preferred Date:<br>
+        <input type="date" name="date" required style="width:100%; padding:0.5rem; margin-bottom:1rem;">
+      </label>
+      <label>Message (Optional):<br>
+        <textarea name="message" rows="4" style="width:100%; padding:0.5rem;"></textarea>
+      </label>
+      <button type="submit" style="background:#5A4D3B; color:#fff; border:none; padding:0.75rem 1.5rem; cursor:pointer; border-radius:4px; margin-top:1rem;">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <h3>About Olimi</h3>
+      <p>Olimi Arise & Shine is dedicated to guiding you on your journey of healing, peace, love, and freedom.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="index.html#journey">Your Journey</a>
+      <a href="index.html#programs">Pathways to Shine</a>
+      <a href="book-session.html">Book a Session</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-column newsletter">
+      <h3>Subscribe</h3>
+      <p>Join our newsletter for updates and inspiration.</p>
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-column">
+      <h3>Other</h3>
+      <p>Follow us on social media and stay connected with our community.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sideMenu = document.querySelector('.side-menu');
+    menuToggle.addEventListener('click', () => {
+      sideMenu.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
